@@ -1,5 +1,6 @@
-# EMOchi
 <p align="center">
+<img src="images/logo.png" width="170">
+</p><p align="center">
 English | <a href="docs/README_FA.md">فارسی 🇮🇷</a>
 </p>
 
