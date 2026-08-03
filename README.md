@@ -1,0 +1,2 @@
+# EMOchi
+🪄 software + 🌐 hardware
