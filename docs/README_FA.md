@@ -1,4 +1,6 @@
-# 🤖 EMOchi
+<p align="center">
+<img src="../images/logo.png" width="170">
+</p><p align="center">
 
 **ربات چهره‌ی احساسی مبتنی بر Arduino Uno و نمایشگر OLED 128×64 SSD1306**
 
