@@ -1,5 +1,7 @@
 # EMOchi
-🪄 software + 🌐 hardware
+<p align="center">
+English | <a href="docs/README_FA.md">فارسی 🇮🇷</a>
+</p>
 
 
 <div align="center">
