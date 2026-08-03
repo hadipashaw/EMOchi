@@ -66,7 +66,7 @@ Update the remaining sensor pins according to your sketch.
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/OLED-Emotion-Robot.git
+[git clone https://github.com/YOUR_USERNAME/OLED-Emotion-Robot.git](https://github.com/hadipashaw/EMOchi.git)
 ```
 
 Open
