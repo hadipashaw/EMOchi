@@ -122,6 +122,7 @@ OLED-Emotion-Robot
 # 📸 Gallery
 
 <img src="images/robot.jpg" width="450">
+<img src="images/wiring.png" width="450">
 
 ---
 
