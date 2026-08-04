@@ -139,10 +139,10 @@ Total (basic setup):            ~$35-50
 │ OLED (128×64) SSD1306               │
 ├─────────────────────────────────────┤
 │ Pin    → Arduino Uno                │
-│ VCC    → 5V (or 3.3V)              │
+│ VCC    → 5V (or 3.3V)               │
 │ GND    → GND                        │
-│ SDA    → A4 (SDA/D20 on Mega)      │
-│ SCL    → A5 (SCL/D21 on Mega)      │
+│ SDA    → A4 (SDA/D20 on Mega)       │
+│ SCL    → A5 (SCL/D21 on Mega)       │
 └─────────────────────────────────────┘
 ```
 
@@ -279,29 +279,29 @@ Wait for Input
 │            Arduino Main Loop (50 FPS)            │
 ├──────────────────────────────────────────────────┤
 │                                                  │
-│  ┌─────────────────────────────────────────┐   │
-│  │ 1. Read Sensors (Non-blocking)          │   │
-│  │    - Touch: digitalRead(touchPin)       │   │
-│  │    - LDR: analogRead(ldrPin)            │   │
-│  └─────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────┐     │
+│  │ 1. Read Sensors (Non-blocking)          │     │
+│  │    - Touch: digitalRead(touchPin)       │     │ 
+│  │    - LDR: analogRead(ldrPin)            │     │
+│  └─────────────────────────────────────────┘     │
 │                      ↓                           │
-│  ┌─────────────────────────────────────────┐   │
-│  │ 2. Update Mood & Animation State        │   │
-│  │    - Check if mood should change        │   │
-│  │    - Calculate animation frame          │   │
-│  └─────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────┐     │
+│  │ 2. Update Mood & Animation State        │     │
+│  │    - Check if mood should change        │     │
+│  │    - Calculate animation frame          │     │
+│  └─────────────────────────────────────────┘     │
 │                      ↓                           │
-│  ┌─────────────────────────────────────────┐   │
-│  │ 3. Draw Eyes on OLED Display            │   │
-│  │    - Clear previous frame                │   │
-│  │    - Draw pupils, pupils, expressions   │   │
-│  │    - Update display (I2C)               │   │
-│  └─────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────┐     │
+│  │ 3. Draw Eyes on OLED Display            │     │
+│  │    - Clear previous frame                │    │
+│  │    - Draw pupils, pupils, expressions   │     │
+│  │    - Update display (I2C)               │     │
+│  └─────────────────────────────────────────┘     │
 │                      ↓                           │
-│  ┌─────────────────────────────────────────┐   │
-│  │ 4. Frame Rate Control                   │   │
-│  │    - Wait until 20ms elapsed (50 FPS)   │   │
-│  └─────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────┐     │
+│  │ 4. Frame Rate Control                   │     │
+│  │    - Wait until 20ms elapsed (50 FPS)   │     │
+│  └─────────────────────────────────────────┘     │
 │                                                  │
 └──────────────────────────────────────────────────┘
 ```
