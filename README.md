@@ -1,20 +1,20 @@
-
 <p align="center">
-<img src="images/logo.png" width="170">
-</p><p align="center">
-English | <a href="docs/README_FA.md">فارسی 🇮🇷</a>
+  <img src="images/logo.png" width="170" alt="EMOchi logo">
 </p>
 
+<p align="center">
+  <a href="README.md">English</a> · <a href="docs/README_FA.md">فارسی 🇮🇷</a>
+</p>
 
 <div align="center">
 
-# 🤖 OLED Emotion Robot
+# 🤖 EMOchi
 
-**An expressive Arduino robot face powered by a 128×64 SSD1306 OLED display.**
+### An expressive Arduino OLED robot face
 
-Smooth eye animations, blinking, emotions, sleep mode, and sensor interaction.
+A lightweight emotional robot built with **Arduino Uno** and a **128×64 SSD1306 OLED** display. EMOchi combines animated eyes, blinking, emotions, sleep mode, and sensor interaction in a compact Arduino project.
 
-<img src="images/demo.gif" width="600"/>
+<img src="images/demo.gif" width="600" alt="EMOchi demo">
 
 ![Arduino](https://img.shields.io/badge/Arduino-Uno-00979D?style=for-the-badge&logo=arduino)
 ![OLED](https://img.shields.io/badge/OLED-SSD1306-blue?style=for-the-badge)
@@ -25,25 +25,26 @@ Smooth eye animations, blinking, emotions, sleep mode, and sensor interaction.
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-- 👀 Natural eye movement
-- 😉 Random blinking
+- 👀 Smooth animated robot eyes
+- 😉 Automatic blinking
+- 👈👉 Idle eye movement
 - 😊 Happy expression
 - 😠 Angry expression
 - 🌙 Automatic sleep mode
-- ☀️ Wake up when light returns
+- ☀️ Wake-up behavior based on light
 - 👆 Touch interaction
 - 💡 LDR light detection
-- ⚡ Optimized for Arduino Uno
-- 🧠 Lightweight animation engine
+- ⚡ Designed for Arduino Uno
+- 🧠 Lightweight animation logic
 
 ---
 
-# 📦 Hardware
+## 🧩 Hardware
 
 | Component | Quantity |
-|-----------|---------:|
+|---|---:|
 | Arduino Uno | 1 |
 | SSD1306 OLED 128×64 I2C | 1 |
 | Touch Sensor | 1 |
@@ -52,102 +53,141 @@ Smooth eye animations, blinking, emotions, sleep mode, and sensor interaction.
 
 ---
 
-# 🔌 Wiring
+## 🔌 OLED Wiring
 
-| OLED | Arduino |
-|------|---------|
+| OLED | Arduino Uno |
+|---|---|
 | VCC | 5V |
 | GND | GND |
 | SDA | A4 |
 | SCL | A5 |
 
-Update the remaining sensor pins according to your sketch.
+> **Note:** Sensor pin assignments are defined by the Arduino sketch. Check the source code before wiring the Touch Sensor and LDR module.
 
 ---
 
-# 🚀 Installation
+## 📦 Requirements
 
-Clone the repository
+### Hardware
+
+- Arduino Uno
+- 128×64 SSD1306 OLED with I2C
+- Touch sensor
+- LDR module
+
+### Arduino Libraries
+
+Install these libraries through the Arduino IDE Library Manager when required by the sketch:
+
+- **Adafruit GFX Library**
+- **Adafruit SSD1306**
+- **FluxGarage RoboEyes** — only if your sketch uses the external library version rather than the bundled RoboEyes implementation
+
+> **Important:** The current repository contains RoboEyes implementation code inside `Arduino_Code/OLED_Emotion_Robot.ino`. The project should not include a second conflicting RoboEyes implementation when compiling.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-https://github.com/hadipashaw/EMOchi.git
+git clone https://github.com/hadipashaw/EMOchi.git
+cd EMOchi
 ```
 
-Open
+### 2. Open the Arduino project
 
-```
+Open the Arduino sketch from:
+
+```text
 Arduino_Code/OLED_Emotion_Robot.ino
 ```
 
-Install required libraries
+### 3. Install the required libraries
 
-- Adafruit GFX
-- Adafruit SSD1306
-- FluxGarage RoboEyes
+Install the libraries required by the sketch from the Arduino IDE Library Manager.
 
-Upload to your Arduino Uno.
+### 4. Select the board
 
----
+In Arduino IDE, select:
 
-# 🎮 Behavior
-
-| Action | Result |
-|---------|--------|
-| Power On | Idle animation |
-| Random Timer | Eyes look left/right |
-| Touch | Happy face |
-| Darkness | Sleep mode |
-| Light | Wake up |
-
----
-
-# 📁 Project Structure
-
+```text
+Board: Arduino Uno
 ```
-OLED-Emotion-Robot
-│
-├── Arduino_Code
+
+### 5. Connect the hardware
+
+Wire the OLED and sensors according to the wiring section and the pin definitions in the sketch.
+
+### 6. Compile and upload
+
+Connect the Arduino Uno through USB, compile the sketch, and upload it to the board.
+
+---
+
+## 🎮 Behavior
+
+| Input / Event | Behavior |
+|---|---|
+| Power On | Starts the robot animation |
+| Idle timer | Eyes move to different positions |
+| Automatic timer | Eyes blink randomly |
+| Touch | Triggers an interactive emotion |
+| Darkness | Enters sleep behavior |
+| Light returns | Wakes from sleep behavior |
+
+The exact timing and sensor behavior are controlled by the values in the Arduino sketch.
+
+---
+
+## 📁 Project Structure
+
+```text
+EMOchi/
+├── Arduino_Code/
 │   └── OLED_Emotion_Robot.ino
-│
-├── images
+├── docs/
+│   └── README_FA.md
+├── images/
 │   ├── demo.gif
-│   ├── robot.jpg
-│   └── wiring.png
-│
+│   ├── logo.png
+│   └── robot.jpg
 ├── LICENSE
 └── README.md
 ```
 
 ---
 
-# 📸 Gallery
+## 📸 Gallery
 
-<img src="images/robot.jpg" width="450">
-<img src="images/wiring.png" width="450">
+<p align="center">
+  <img src="images/robot.jpg" width="450" alt="EMOchi robot">
+</p>
 
 ---
 
-# ❤️ Credits
+## 🙏 Credits
 
-Inspired by the amazing work of the open-source Arduino community.
+EMOchi is inspired by the open-source Arduino and OLED community.
 
 Special thanks to:
 
-- FluxGarage RoboEyes
-- Adafruit
+- [FluxGarage RoboEyes](https://github.com/FluxGarage/RoboEyes)
+- [Adafruit](https://github.com/adafruit)
 
 ---
 
-# 📜 License
+## 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
-See the LICENSE file for details.
+See [LICENSE](LICENSE) for the complete license text.
 
 ---
 
 <div align="center">
 
-⭐ If you like this project, consider giving it a star!
+⭐ If you find EMOchi useful, consider giving the repository a star.
 
 </div>
